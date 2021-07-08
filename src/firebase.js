@@ -20,4 +20,4 @@ export const database={
     users:firestore.collection('users'),
     getCurrentTimeStamp:firebase.firestore.FieldValue.serverTimestamp
 }
-export default firebase.storage();
+export const storage= firebase.storage();
