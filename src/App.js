@@ -1,9 +1,11 @@
-
 import './App.css';
-
+import AuthProvider from './Context/AuthProvider';
+import Signup from './Components/Signup';
 function App() {
   return (
-   <h1>hello</h1>
+   <AuthProvider>
+     <Signup/>
+   </AuthProvider>
   );
 }
 

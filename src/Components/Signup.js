@@ -6,9 +6,16 @@ function Signup() {
     const[name,setName]=useState('');
     const[error,setError]=useState('');
     const[loading,setLoading]=useState(false);
-    const{signup}=AuthContext.useContext
+    const{signup}=AuthContext.useContext;
+    console.log(signup);
+    
     const handleSignup= async (e)=>{
         e.preventDefault();
+        setLoading(true);
+        let res= await signup(email,password);
+        let uid=res.user.uid;
+        console.log(uid);
+        setLoading(false);
     }
 
     return (
