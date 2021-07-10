@@ -10,12 +10,17 @@ function Signup() {
     console.log(signup);
 
     const handleSignup= async (e)=>{
+        try{
         e.preventDefault();
         setLoading(true);
         let res= await signup(email,password);
         let uid=res.user.uid;
         console.log(uid);
         setLoading(false);
+        }
+        catch(err){
+            console.log(err);
+        }
     }
 
     return (
