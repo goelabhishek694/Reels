@@ -1,6 +1,6 @@
 import React,{useState,useEffect,useContext}from 'react'
 import {auth} from "../firebase"
-const AuthContext=React.createContext();
+export const AuthContext=React.createContext();
 //props 
 function AuthProvider({children}) {
 

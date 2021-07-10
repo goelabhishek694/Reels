@@ -6,9 +6,9 @@ function Signup() {
     const[name,setName]=useState('');
     const[error,setError]=useState('');
     const[loading,setLoading]=useState(false);
-    const{signup}=AuthContext.useContext;
+    const{signup}=useContext(AuthContext);
     console.log(signup);
-    
+
     const handleSignup= async (e)=>{
         e.preventDefault();
         setLoading(true);
